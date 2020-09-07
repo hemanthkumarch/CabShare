@@ -1,0 +1,466 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="Fragments.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/colorPrimary"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:padding="12dp"
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_launcher_yourrides_foreground"
+                android:background="@drawable/image_circle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="CabShare"
+                android:textSize="23dp"
+                android:textColor="@color/colorWhite"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/linearlayout_background"
+            android:src="@drawable/ic_launcher_profile_foreground" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/fullName"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/show_roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_next_foreground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll Number  :"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/rollNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="10dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@drawable/linearlayout_background"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_roll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1.2"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/cancel_roll"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="cancel"/>
+            <Button
+                android:id="@+id/ok_roll"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.1"
+                android:text="update"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/show_phone"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_next_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Phone Number  :"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_background"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1.2"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/cancel_phone"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="cancel"/>
+            <Button
+                android:id="@+id/ok_phone"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.1"
+                android:text="update"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/show_hostel"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_next_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Hostel :"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hostel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_hostel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_background"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_hostel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1.2"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/cancel_hostel"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="cancel"/>
+            <Button
+                android:id="@+id/ok_hostel"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.1"
+                android:text="update"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/show_room"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_next_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Room Number  :"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/room"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_background"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_room"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1.2"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/cancel_room"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="cancel"/>
+            <Button
+                android:id="@+id/ok_room"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.1"
+                android:text="update"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/show_gender"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_next_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Status  :"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linearlayout_background"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1.2"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/cancel_gender"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="cancel"/>
+            <Button
+                android:id="@+id/ok_gender"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.1"
+                android:text="update"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="100dp"/>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#E53935"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+</LinearLayout>

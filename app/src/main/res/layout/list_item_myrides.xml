@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item"
+    android:background="@drawable/background1"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="namaste"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_margin="2.5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="2.5dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="2.5dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_launcher_next_foreground"
+        android:tint="#3C3F41"
+        />
+</LinearLayout>

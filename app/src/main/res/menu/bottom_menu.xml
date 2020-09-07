@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navAddRide"
+        android:icon="@drawable/ic_launcher_addride_foreground"
+        android:title="add ride"/>
+
+    <item android:id="@+id/navYourRides"
+        android:icon="@drawable/ic_launcher_yourrides_foreground"
+        android:title="your rides"/>
+
+    <item android:id="@+id/navProfile"
+        android:icon="@drawable/ic_launcher_profile_foreground"
+        android:title="profile"/>
+
+
+</menu>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/linearlayout_background"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login to CabShare"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayout_background"
+        android:hint="Email Address"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayout_background"
+        android:hint="Password"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:id="@+id/password"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_margin="10dp"
+        android:text="login"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

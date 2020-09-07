@@ -1,0 +1,238 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1F5FE"
+    tools:context="Fragments.AddRideFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/colorPrimary"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:padding="12dp"
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_launcher_yourrides_foreground"
+                android:background="@drawable/image_circle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="CabShare"
+                android:textSize="23dp"
+                android:textColor="@color/colorWhite"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Journey Information"
+        android:layout_margin="20dp"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/bar"/>
+
+    <TextView
+        android:layout_below="@+id/linearLayout"
+        android:id="@+id/imp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Fill all the Entries"
+        android:textColor="@color/colorRed"
+        android:visibility="gone"
+        android:background="@drawable/background1"
+        android:textStyle="bold|italic"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_below="@+id/heading"
+        android:background="@drawable/background1"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select your arrival and destination points"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/campusToAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textSize="18dp"
+                android:text="Campus to Airport"/>
+            <RadioButton
+                android:id="@+id/campusToRailwayStation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textSize="18dp"
+                android:text="Campus to Railway Station"/>
+            <RadioButton
+                android:id="@+id/airportToCampus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textSize="18dp"
+                android:text="Airport to Campus"/>
+            <RadioButton
+                android:id="@+id/railwayStationToCampus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textSize="18dp"
+                android:text="Railway Station to Campus"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Date of your journey"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="14dp"
+            android:text="*date is in the given format day-month-year"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="italic"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/btn_day"
+                android:layout_width="50dp"
+                android:background="@drawable/linearlayout_background"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"/>
+            <Spinner
+                android:id="@+id/btn_month"
+                android:layout_weight="4"
+                android:layout_width="50dp"
+                android:background="@drawable/linearlayout_background"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"/>
+            <Spinner
+                android:id="@+id/btn_year"
+                android:layout_weight="2"
+                android:layout_width="50dp"
+                android:background="@drawable/linearlayout_background"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Time you leave"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="14dp"
+            android:text="*time is in the given format hour-min-AM/PM"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="italic"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/btn_hour"
+            android:layout_width="70dp"
+            android:background="@drawable/linearlayout_background"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"/>
+            <Spinner
+                android:id="@+id/btn_min"
+                android:layout_width="70dp"
+                android:background="@drawable/linearlayout_background"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"/>
+
+        <Spinner
+            android:id="@+id/btn_ampm"
+            android:layout_width="70dp"
+            android:background="@drawable/linearlayout_background"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_background"
+        android:text="Confirm"
+        android:backgroundTint="#388E3C"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"/>
+
+</RelativeLayout>
